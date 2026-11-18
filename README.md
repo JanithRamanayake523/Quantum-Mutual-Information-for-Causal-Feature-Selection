@@ -2,6 +2,7 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![tests](https://github.com/JanithRamanayake523/QMI-CFS/actions/workflows/tests.yml/badge.svg)](https://github.com/JanithRamanayake523/QMI-CFS/actions/workflows/tests.yml)
 [![Manuscript](https://img.shields.io/badge/manuscript-forthcoming-orange.svg)](#-manuscript)
 
 > **An empirical study of feature recovery and treatment effect estimation using quantum-inspired dependency measures.**
@@ -26,7 +27,7 @@ This repository accompanies the manuscript:
 
 The manuscript has been accepted for publication in a Springer CCIS proceedings volume. In line with the publisher's policy, the paper itself (PDF and LaTeX source) is **not** distributed in this repository until it is officially published. A citation entry and link will be added here after publication.
 
-Conference slides are in [`presentation/`](presentation/).
+Slides presented at ICTer 2026: [PDF](presentation/347_Janith_Ramanayake_.pdf) · [PPTX](presentation/347_Janith_Ramanayake_.pptx).
 
 The code, experiment results (`results/`), and result tables used in the paper are available here so every reported number can be reproduced.
 
@@ -67,6 +68,8 @@ QMI-CFS/
 ## 🛠️ Installation
 
 ```bash
+git clone https://github.com/JanithRamanayake523/QMI-CFS.git
+cd QMI-CFS
 pip install -e .
 ```
 

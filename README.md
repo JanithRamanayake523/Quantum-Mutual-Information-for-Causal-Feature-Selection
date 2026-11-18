@@ -26,6 +26,8 @@ This repository accompanies the manuscript:
 
 The manuscript has been accepted for publication in a Springer CCIS proceedings volume. In line with the publisher's policy, the paper itself (PDF and LaTeX source) is **not** distributed in this repository until it is officially published. A citation entry and link will be added here after publication.
 
+Conference slides are in [`presentation/`](presentation/).
+
 The code, experiment results (`results/`), and result tables used in the paper are available here so every reported number can be reproduced.
 
 ---
@@ -50,6 +52,7 @@ QMI-CFS/
 ├── qmi_cfs/              # Core Python package
 ├── scripts/              # Experiment runners & table/figure generators
 ├── tests/                # Unit and integration tests
+├── presentation/         # Conference slides (PDF and PPTX)
 ├── results/              # Saved CSV/JSON outputs, plots, tables (see results/README.md)
 ├── .github/workflows/    # CI (pytest)
 ├── CITATION.cff

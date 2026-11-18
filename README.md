@@ -49,8 +49,9 @@ Selected features are fed into a doubly-robust AIPW estimator for the Average Tr
 QMI-CFS/
 ├── qmi_cfs/              # Core Python package
 ├── scripts/              # Experiment runners & table/figure generators
-├── tests/                # Integration tests
-├── results/              # Experimental CSV/JSON outputs, plots, and camera-ready tables
+├── tests/                # Unit and integration tests
+├── results/              # Saved CSV/JSON outputs, plots, tables (see results/README.md)
+├── .github/workflows/    # CI (pytest)
 ├── CITATION.cff
 ├── README.md
 ├── LICENSE
@@ -76,9 +77,10 @@ pip install -e ".[boruta]"
 
 - Python ≥ 3.9
 - NumPy, SciPy, scikit-learn, pandas, matplotlib, statsmodels
-- BorutaPy, tqdm
+- tqdm
+- BorutaPy (optional)
 
-See [`requirements.txt`](requirements.txt) for pinned versions.
+> **Note:** without BorutaPy, `BorutaFeatureSelector` silently falls back to an MI-based selector. The saved IHDP "Boruta" rows were produced by this fallback; install the `boruta` extra to use the real algorithm.
 
 ---
 
@@ -122,6 +124,16 @@ Or regenerate all figures directly from the CSVs:
 python scripts/regenerate_paper_figures.py
 ```
 
+### 3. Supplementary analyses
+
+```bash
+# Recall vs. F1 as predictors of ATE error, TOST equivalence, IHDP selected sets
+python scripts/recall_analysis.py            # add --skip-rerun to reuse saved selected sets
+
+# Same-draw F1 / ATE-error correlation
+python scripts/same_draw_correlation.py
+```
+
 The camera-ready tables used in the paper are stored in [`results/tables_camera_ready/`](results/tables_camera_ready/).
 
 > The manuscript sources are intentionally excluded from this repository (publisher embargo); `paper/` is git-ignored.
@@ -154,19 +166,19 @@ When confounders enter only through multiplicative interactions, all dependency-
 pytest tests/ -q
 ```
 
-The integration tests verify that the core pipeline (data generation → QMI selection → AIPW estimation) runs end-to-end without errors.
+The suite checks density-matrix validity (trace 1, symmetric, PSD), entropy and QMI properties (non-negativity, dependent > independent), AIPW recovery of a known ATE, selector determinism under a fixed seed, and an end-to-end smoke test (data generation → QMI selection → AIPW).
 
 ---
 
 ## 🤝 Contributing
 
-This repository was produced for a research manuscript. If you use or extend QMI-CFS, please consider opening an issue or pull request with improvements, additional baselines, or bug fixes.
+This repository accompanies a research manuscript and its saved results are frozen to match the paper. Issues and pull requests (bug fixes, additional baselines) are welcome; changes that alter numerical behaviour should be clearly flagged.
 
 ---
 
 ## 📚 Citation
 
-If you use this code or the QMI-CFS method in your research, please cite the paper once it is published (see [`CITATION.cff`](CITATION.cff)). The reference and DOI will be added here after publication.
+If you use this code or the QMI-CFS method in your research, please cite it via [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository" button). The paper reference and DOI will be added here after publication.
 
 ---
 
@@ -175,7 +187,3 @@ If you use this code or the QMI-CFS method in your research, please cite the pap
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
-<p align="center">
-  <i>Built with ❤️ for reproducible causal machine learning research.</i>
-</p>

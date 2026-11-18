@@ -7,6 +7,7 @@ import numpy as np
 import warnings
 from typing import Optional, Tuple
 
+from scipy.stats import norm
 from sklearn.linear_model import LogisticRegression, Ridge
 
 
@@ -141,5 +142,5 @@ class AIPWEstimator:
         tau_hat = float(np.mean(psi))
         n = len(psi)
         se = float(np.std(psi, ddof=1) / np.sqrt(n))
-        z = 1.96 if alpha == 0.05 else 2.576
+        z = float(norm.ppf(1 - alpha / 2))
         return (tau_hat - z * se, tau_hat + z * se)

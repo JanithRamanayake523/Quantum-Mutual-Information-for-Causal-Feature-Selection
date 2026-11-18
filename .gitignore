@@ -53,3 +53,13 @@ DescriptionTexts.txt
 paper/
 /Quantum_Mutual_Information_for_Causal_Feature_Selection__*.pdf
 *.pdf.bak
+
+# Personal / conference admin files (not part of the research code)
+ICTer2026_*
+icter.lk_*
+presentation/
+
+# Editable-install / tool caches
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/

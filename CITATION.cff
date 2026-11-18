@@ -1,18 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the manuscript once it is accepted and published."
+message: "If you use this software, please cite it as below. The manuscript reference will be added after publication."
 title: "QMI-CFS: Quantum Mutual Information for Causal Feature Selection"
 version: 0.1.0
 date-released: 2026-06-06
 authors:
-  - family-names: "Research Team"
-    given-names: "QMI-CFS"
+  - family-names: "Ramanayake"
+    given-names: "Janith"
 license: MIT
-repository-code: "https://github.com/YOUR_USERNAME/qmi-cfs"
+repository-code: "https://github.com/JanithRamanayake523/Quantum-Mutual-Information-for-Causal-Feature-Selection"
 preferred-citation:
   type: generic
   title: "Quantum Mutual Information for Causal Feature Selection: An Empirical Study of Feature Recovery and Treatment Effect Estimation"
   authors:
-    - family-names: "Research Team"
-      given-names: "QMI-CFS"
+    - family-names: "Ramanayake"
+      given-names: "Janith"
   year: 2026
-  url: "https://github.com/YOUR_USERNAME/qmi-cfs"
+  url: "https://github.com/JanithRamanayake523/Quantum-Mutual-Information-for-Causal-Feature-Selection"

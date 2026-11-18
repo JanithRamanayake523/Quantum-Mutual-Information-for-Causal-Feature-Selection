@@ -2,7 +2,7 @@
 """Generate publication-ready LaTeX tables for the QMI-CFS paper.
 
 Usage:
-    python scripts/generate_tables.py --output paper/tables
+    python scripts/generate_tables.py --output _local/paper/tables
 """
 import argparse
 import os

@@ -136,7 +136,7 @@ python scripts/same_draw_correlation.py
 
 The camera-ready tables used in the paper are stored in [`results/tables_camera_ready/`](results/tables_camera_ready/).
 
-> The manuscript sources are intentionally excluded from this repository (publisher embargo); `paper/` is git-ignored.
+> The manuscript sources are intentionally excluded from this repository (publisher embargo); everything unpublished lives in the git-ignored `_local/` folder.
 
 ---
 

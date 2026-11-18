@@ -222,7 +222,7 @@ def print_correlations(data):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output', type=str, default='paper/figures')
+    parser.add_argument('--output', type=str, default='_local/paper/figures')
     args = parser.parse_args()
 
     ensure_dir(args.output)

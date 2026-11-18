@@ -2,7 +2,7 @@
 """Regenerate the camera-ready figures from saved results (no experiments are run).
 
 Writes new files next to the originals, which are left untouched:
-  paper/final_submission/figures/v6_ihdp_combined.{pdf,png}         -- all 10 methods, IHDP-inspired labels,
+  _local/paper/final_submission/figures/v6_ihdp_combined.{pdf,png}         -- all 10 methods, IHDP-inspired labels,
                                                       bars coloured by significance vs QMI-CFS
   (unused) v6_f1_vs_ate_by_dataset.{pdf,png}  -- per-DGP scatter without fitted lines
 
@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-OUT_DIR = 'paper/final_submission/figures'
+OUT_DIR = '_local/paper/final_submission/figures'
 
 # Embed TrueType instead of Type 3 fonts (Springer production requirement).
 plt.rcParams['pdf.fonttype'] = 42
@@ -262,6 +262,6 @@ def plot_same_draw_rho():
 
 if __name__ == '__main__':
     # Only the figures used in the final submission; the other plot functions
-    # produce earlier drafts kept in paper/archive/figures.
+    # produce earlier drafts kept in _local/paper/archive/figures.
     plot_ihdp_combined()
     plot_same_draw_rho()

@@ -9,7 +9,7 @@ import pandas as pd
 from qmi_cfs.visualization import plot_experiment2_results, plot_experiment3_results
 from scripts.generate_ic_figure import plot_ic_comparison
 
-OUTPUT_DIR = 'paper/figures'
+OUTPUT_DIR = '_local/paper/figures'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 df_exp1 = pd.read_csv('results/experiment1/experiment1_results.csv')

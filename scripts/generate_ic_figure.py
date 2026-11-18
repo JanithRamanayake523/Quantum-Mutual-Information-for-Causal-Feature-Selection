@@ -46,7 +46,7 @@ def main():
     parser = argparse.ArgumentParser(
         description='Generate IC comparison figure for the paper manuscript'
     )
-    parser.add_argument('--output', type=str, default='paper/figures')
+    parser.add_argument('--output', type=str, default='_local/paper/figures')
     args = parser.parse_args()
 
     ensure_dir(args.output)
